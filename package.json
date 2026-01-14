@@ -1,0 +1,6 @@
+{
+  "name": "corporate-bullshit-generator",
+  "scripts": {
+    "test": "node tests/validate-json.js && node tests/generator.test.js"
+  }
+}
