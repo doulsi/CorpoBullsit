@@ -28,3 +28,14 @@ Clique sur le bouton → un discours est généré dynamiquement
 
 ## 🧠 Pourquoi ce projet ?
 Simple, fun, viral, et parfait pour montrer créativité et sens produit.
+
+
+## 🤝 Contribuer
+
+Ce projet est ouvert aux contributions.
+Tu peux :
+- ajouter des expressions corporate
+- enrichir les datasets existants
+- proposer de nouveaux styles (startup, conseil…)
+
+➡️ Consulte le fichier [CONTRIBUTING.md](CONTRIBUTING.md)

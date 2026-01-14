@@ -1,0 +1,25 @@
+name: ➕ Ajouter du contenu corporate
+description: Proposer une nouvelle expression corporate vide
+title: "[DATA] Nouvelle proposition corporate"
+labels: ["content"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Catégorie
+      options:
+        - intros
+        - verbs
+        - concepts
+        - buzzwords
+        - conclusions
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: Contenu proposé
+      placeholder: "Ex: piloté par la valeur business"
+    validations:
+      required: true
