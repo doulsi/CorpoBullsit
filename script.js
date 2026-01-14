@@ -1,42 +1,22 @@
-const intros = [
-    "Dans un contexte de transformation globale,",
-    "Face aux enjeux actuels du marché,",
-    "Dans une dynamique d'innovation continue,",
-    "Afin d'accompagner notre croissance durable,"
-];
+let data = {};
 
-const verbs = [
-    "nous devons capitaliser sur",
-    "il est essentiel d’aligner",
-    "nous cherchons à optimiser",
-    "nous nous engageons à renforcer"
-];
+fetch("data/corporate.json")
+  .then(res => res.json())
+  .then(json => data = json);
 
-const concepts = [
-    "les synergies transverses",
-    "la valeur ajoutée collective",
-    "les leviers de performance",
-    "l’agilité organisationnelle",
-    "les process collaboratifs"
-];
-
-const conclusions = [
-    "pour répondre aux attentes des parties prenantes.",
-    "afin de rester compétitifs sur le long terme.",
-    "dans une logique gagnant-gagnant.",
-    "au cœur de notre vision stratégique."
-];
-
-function randomItem(array) {
-    return array[Math.floor(Math.random() * array.length)];
+function pick(key) {
+  return data[key][Math.floor(Math.random() * data[key].length)];
 }
 
 function generateSpeech() {
-    const speech = `
-        ${randomItem(intros)}
-        ${randomItem(verbs)}
-        ${randomItem(concepts)}
-        ${randomItem(conclusions)}
-    `;
-    document.getElementById("output").innerText = speech;
+  const blocks = [
+    pick("intros"),
+    pick("verbs"),
+    pick("concepts"),
+    pick("buzzwords"),
+    pick("conclusions")
+  ];
+
+  document.getElementById("output").innerText =
+    blocks.join(" ");
 }
